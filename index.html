@@ -1,1 +1,356 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamWaveBD - Premium Bedsheets</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-[Poppins] bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="index.html" class="flex items-center">
+                    <img src="https://dreamwavebd.github.io/WhatsApp%20Image%202025-09-27%20at%2015.43.49.jpeg" alt="DreamWaveBD Logo" class="h-16 mr-3">
+                    <span class="text-2xl font-bold text-pink-600 hidden md:block">DreamWaveBD</span>
+                </a>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#" class="text-gray-700 hover:text-pink-600 transition">Home</a>
+                <a href="#products" class="text-gray-700 hover:text-pink-600 transition">Products</a>
+                <a href="#about" class="text-gray-700 hover:text-pink-600 transition">About</a>
+                <a href="#contact" class="text-gray-700 hover:text-pink-600 transition">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="relative">
+                    <input type="text" id="search-input" placeholder="Search products..." class="pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent">
+                    <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                </div>
+
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="#" class="text-gray-700 hover:text-pink-600 transition">Home</a>
+                <a href="#products" class="text-gray-700 hover:text-pink-600 transition">Products</a>
+                <a href="#about" class="text-gray-700 hover:text-pink-600 transition">About</a>
+                <a href="#contact" class="text-gray-700 hover:text-pink-600 transition">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-pink-50 to-purple-50 py-16">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Luxury Starts from Your Bed</h1>
+                <p class="text-lg text-gray-600 mb-6">Experience the ultimate comfort with our premium bedsheets. Elevate your bedroom with style and luxury.</p>
+                <div class="flex space-x-4">
+                    <a href="#products" class="bg-pink-600 hover:bg-pink-700 text-white font-medium py-3 px-6 rounded-2xl transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        Shop Now
+                    </a>
+                    <a href="#about" class="bg-white hover:bg-gray-100 text-pink-600 font-medium py-3 px-6 rounded-2xl transition border border-pink-600 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Premium Bedsheets" class="rounded-2xl shadow-2xl w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Shop by Category</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="category-card bg-pink-50 rounded-2xl p-6 text-center shadow-md hover:shadow-lg transition cursor-pointer" data-category="premium">
+                    <div class="bg-pink-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-crown text-pink-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Premium</h3>
+                    <p class="text-gray-600 text-sm">Luxury bedsheets</p>
+                </div>
+                <div class="category-card bg-blue-50 rounded-2xl p-6 text-center shadow-md hover:shadow-lg transition cursor-pointer" data-category="cotton">
+                    <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-leaf text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Cotton</h3>
+                    <p class="text-gray-600 text-sm">Soft & breathable</p>
+                </div>
+                <div class="category-card bg-purple-50 rounded-2xl p-6 text-center shadow-md hover:shadow-lg transition cursor-pointer" data-category="silk">
+                    <div class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tint text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Silk</h3>
+                    <p class="text-gray-600 text-sm">Smooth & elegant</p>
+                </div>
+                <div class="category-card bg-green-50 rounded-2xl p-6 text-center shadow-md hover:shadow-lg transition cursor-pointer" data-category="printed">
+                    <div class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-paint-brush text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Printed</h3>
+                    <p class="text-gray-600 text-sm">Stylish patterns</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section id="products" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Featured Products</h2>
+            <div id="products-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Product skeleton loaders -->
+                <div class="product-skeleton bg-white rounded-2xl p-4 shadow-md">
+                    <div class="bg-gray-200 rounded-2xl h-48 mb-4 animate-pulse"></div>
+                    <div class="bg-gray-200 h-6 w-3/4 mb-2 animate-pulse"></div>
+                    <div class="bg-gray-200 h-5 w-1/2 mb-4 animate-pulse"></div>
+                    <div class="bg-gray-200 h-10 w-full rounded-xl animate-pulse"></div>
+                </div>
+                <div class="product-skeleton bg-white rounded-2xl p-4 shadow-md">
+                    <div class="bg-gray-200 rounded-2xl h-48 mb-4 animate-pulse"></div>
+                    <div class="bg-gray-200 h-6 w-3/4 mb-2 animate-pulse"></div>
+                    <div class="bg-gray-200 h-5 w-1/2 mb-4 animate-pulse"></div>
+                    <div class="bg-gray-200 h-10 w-full rounded-xl animate-pulse"></div>
+                </div>
+                <div class="product-skeleton bg-white rounded-2xl p-4 shadow-md">
+                    <div class="bg-gray-200 rounded-2xl h-48 mb-4 animate-pulse"></div>
+                    <div class="bg-gray-200 h-6 w-3/4 mb-2 animate-pulse"></div>
+                    <div class="bg-gray-200 h-5 w-1/2 mb-4 animate-pulse"></div>
+                    <div class="bg-gray-200 h-10 w-full rounded-xl animate-pulse"></div>
+                </div>
+                <div class="product-skeleton bg-white rounded-2xl p-4 shadow-md">
+                    <div class="bg-gray-200 rounded-2xl h-48 mb-4 animate-pulse"></div>
+                    <div class="bg-gray-200 h-6 w-3/4 mb-2 animate-pulse"></div>
+                    <div class="bg-gray-200 h-5 w-1/2 mb-4 animate-pulse"></div>
+                    <div class="bg-gray-200 h-10 w-full rounded-xl animate-pulse"></div>
+                </div>
+                <!-- Products will be loaded here from Firestore -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">About Us</h2>
+            <div class="bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl p-8 shadow-lg max-w-3xl mx-auto">
+                <div class="text-center space-y-4">
+                    <p class="text-xl font-medium">🎀 Luxury Starts from Your Bed</p>
+                    <p class="text-lg">💫 Premium • Stylish • Comfortable Bedsheets</p>
+                    <p class="text-lg">🛍️ Order Now | Nationwide Delivery</p>
+                    <p class="text-lg">❤️ Customer Satisfaction First</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">What Our Customers Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-2xl p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The quality of these bedsheets is amazing! So soft and comfortable, I've never slept better. Will definitely order more!"</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-pink-200 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-pink-700 font-semibold">SA</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Sarah Ahmed</h4>
+                            <p class="text-sm text-gray-500">Dhaka</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Fast delivery and excellent customer service. The bedsheets are exactly as described - premium quality and beautiful designs."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-blue-700 font-semibold">RK</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Rahim Khan</h4>
+                            <p class="text-sm text-gray-500">Chittagong</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"I've ordered multiple times from DreamWaveBD and have never been disappointed. The quality is consistent and the designs are gorgeous."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-green-200 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-green-700 font-semibold">FI</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Fatima Islam</h4>
+                            <p class="text-sm text-gray-500">Sylhet</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Contact Us</h2>
+            <div class="bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl p-8 shadow-lg max-w-3xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Get in Touch</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="bg-pink-100 rounded-full w-10 h-10 flex items-center justify-center mr-3">
+                                    <i class="fab fa-whatsapp text-pink-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-600">WhatsApp</p>
+                                    <a href="https://api.whatsapp.com/send?phone=8801972665758" class="text-pink-600 font-medium">+8801972665758</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-pink-100 rounded-full w-10 h-10 flex items-center justify-center mr-3">
+                                    <i class="fas fa-envelope text-pink-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-600">Email</p>
+                                    <a href="mailto:sompareza00@gmail.com" class="text-pink-600 font-medium">sompareza00@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-pink-100 rounded-full w-10 h-10 flex items-center justify-center mr-3">
+                                    <i class="fas fa-clock text-pink-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-600">Business Hours</p>
+                                    <p class="text-gray-800">9:00 AM - 8:00 PM, Everyday</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Send a Message</h3>
+                        <form id="contact-form" class="space-y-4">
+                            <div>
+                                <input type="text" placeholder="Your Name" class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <input type="email" placeholder="Your Email" class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <textarea placeholder="Your Message" rows="4" class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"></textarea>
+                            </div>
+                            <button type="submit" class="bg-pink-600 hover:bg-pink-700 text-white font-medium py-2 px-6 rounded-xl transition shadow-md hover:shadow-lg w-full">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="https://dreamwavebd.github.io/WhatsApp%20Image%202025-09-27%20at%2015.43.49.jpeg" alt="DreamWaveBD Logo" class="h-12 mr-3">
+                        <span class="text-xl font-bold text-pink-400">DreamWaveBD</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Premium bedsheets for a luxurious sleep experience. Quality you can feel, designs you'll love.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/profile.php?id=61559725861206&rdid=4M50yteNsiUncpQl&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1C6c4aDkYC%2F#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition">Products</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Categories</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Premium Bedsheets</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Cotton Bedsheets</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Silk Bedsheets</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Printed Designs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            <span>+8801631417328</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span>sompareza00@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 DreamWaveBD. All rights reserved. Developed by <a href="https://wa.me/8801631417328" class="text-pink-400 hover:text-pink-300">ABDUR RAHMAN</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-storage-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="init-database.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
